@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>easy chat</title>
+  </head>
+  <body>
+    <h1>EASY CHAT</h1>
+    <div id="chat_container"><!-- 受信したチャットを表示する場所 --></div>
+    <div id="input_container">
+      <!-- 入力欄 -->
+      <div style="display: flex; flex-direction: column">
+        <label>NAME:</label>
+        <!-- 名前 -->
+        <input type="text" id="name" />
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <label>TEXT:</label>
+        <!-- 本文 -->
+        <textarea id="text" cols="30" rows="10"></textarea>
+      </div>
+      <button id="submit">submit</button>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
