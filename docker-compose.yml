@@ -7,7 +7,7 @@ services:
     ports:  
       - 8080:8080
     volumes: 
-      - ~/git/websocket/workspace:/home/node
+      - ./workspace:/home/node
     tty: true
     command: node /home/node/app.js
   
@@ -17,3 +17,5 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: chatappdb
+    volumes: 
+      - ./mongodb/db:/data/db
